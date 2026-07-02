@@ -10,6 +10,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <style>
+        body {
+            margin: 0;
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #fdfdfd;
+            color: #444;
+        }
+        .volume-message {
+            text-align: center;
+            font-size: 20px;
+            margin: 30px;
+            padding: 15px;
+            background: #fff8f5;
+            border: 1px solid #e0cfc2;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="volume-message">
+        ✨ Please raise the volume slightly to fully enjoy the beauty of our wedding site ✨
+    </div>
+
+    <script>
+        // Fade-in animation for the message
+        gsap.from(".volume-message", {
+            opacity: 0,
+            y: -30,
+            duration: 1.5,
+            ease: "power2.out"
+        });
+    </script>
+    <style>
         :root {
             --cream: #FDFBF7; --beige: #CFE2F3; --tan: #6FA8DC; --mocha: #3D85C6; --olive: #2B4F9B;
         }
