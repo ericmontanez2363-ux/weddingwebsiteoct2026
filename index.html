@@ -577,9 +577,11 @@ background: linear-gradient(120deg, #3D85C6 0%, #3D85C6 35%, #ffffff 50%, #3D85C
             x += generaterandomno(-30,30);
             y += generaterandomno(-30,30);
 
-            // Keep butterfly inside window bounds
-            x = Math.max(0, Math.min(window.innerWidth - size, x));
-            y = Math.max(0, Math.min(window.innerHeight - size, y));
+            // Keep butterfly inside a fixed box (20–250px)
+            x=(x<20?30:x);
+            y=(y<20?30:y);
+            x=(x>250?240:x);
+            y=(y>250?240:y);
 
             // Random size changes
             size += generaterandomno(-5,5);
